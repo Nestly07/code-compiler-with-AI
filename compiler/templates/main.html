@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Complier</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/mainstyles.css' %}">
+</head>
+<body>
+    <nav class="nav">
+        <ol>
+            <li><a href="{% url 'signin' %}">Sign In</a></li>
+        </ol>
+    </nav>
+    <div class="home">
+        <div class="intro">
+            <h1>Online Code Compiler</h1>
+            <h2>Welcome to Programming!</h2>
+            <h3>Let's all start coding programmers...</h3>
+        </div>
+        <div class="img">
+            <img src="{% static 'images/mainpic.jpg'%}" alt="img">
+        </div>
+    </div>
+    <div class="courses">
+        <ul class="ul">
+            <li><a href="{% url 'pythonbasics' %}">Python Basics</a></li>
+            <li><a href="{% url 'cbasics'%}">C Basics</a></li>
+            <li><a href="{%url 'c++basics'%}">C++ Basics</a></li>
+            <li><a href="{% url 'javabasics'%}">Java Basics</a></li>
+            <li><a href="{% url 'compiler'%}">Code Compiler</a>
+            <li><a href="{% url 'aichatbot'%}">AI Chatbot</a></li>
+        </ul>
+    </div>
+    <br><hr>
+    <div class="p">
+        <p>This is your online platform for practice programming with ease and confidence. Whether you're a beginner or an experienced developer our intelligent tools are designed to help you write, test, and understand code faster and better.
+            In this platform you can learn coding with the help of Artifical intelligent (AI).Here you can code in languages like Python, C, C++ and Java.
+        </p>
+    </div>
+</body>
+</html>

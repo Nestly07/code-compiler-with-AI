@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+        <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/signinstyles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <center>
+    <h1 id="header"><b>WELCOME CODERS!!</b></h1>
+
+</center>
+</head>
+<body style="background-image: url('{% static 'images/signin.png' %}');">
+    <center>
+
+
+    <div id="login">
+        <div class="main">
+         <img src="{% static 'images/mainpic.jpg'%}" alt="image">
+        <h1>Sign In</h1></div>
+        <form id="form" method="post">
+            <div id="inputbox">
+                <input type="text" id="name" placeholder="username">
+            </div>
+            <div id="inputbox">
+                <input type="email" id="email" placeholder="email">
+            </div>
+            <div id="forgetpassword">
+                <input type="checkbox">Remember Me
+            </div><br>
+            <button onclick="clicked()" id="button" value="submit">Sign in</button>
+            <div id="register">
+                <p>Happy Learning!!!</p>
+            </div><br>
+            <button id="last"><a href="{% url 'main'%}">Back To Main</a></button>
+        </div>
+        </form>
+    </div>
+</center>
+<script>
+        function clicked(){
+            event.preventDefault();
+            const n1=document.getElementById("name").value;
+            const em=document.getElementById("email").value;
+            if(n1&&em){
+                alert("you're successfully signed in "+n1);
+                const b=document.getElementById("b1");
+                document.getElementById("button").innerText="signed in";
+            }
+            else{
+                alert("please,fill out all the information...");
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/pythonstyles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body class="body">
+
+    <nav>
+        <center>
+        <h1><b><i class="fa-brands fa-python"></i> PYTHON BASICS</b></h1>
+        </center>
+    </nav>
+    <br>
+    <div>
+        <br>
+    <h2>Python:</h2><br>
+    <p class="def">Python is a high-level, interpreted, general-purpose programming language created by <b>Guido Van Rossum</b> in <b>1991</b>.It emphasizes readable,concise code with a straightforward syntax and supports multiple programming paradigms(procedural, object-oriented, and functional programming).Python is dunamically typed and garbage-collected, making it beginner-friendly and highly productive for rapid application development.</p>
+    <br><h2>Why Do We Use Python?</h2><br>
+    <ol>
+        <li>Easy to Learn & Readable</li>
+        <li>Cross-Platform</li>
+        <li>Extensive Libraries</li>
+        <li>Community Support</li>
+        <li>Multi-Purpose</li>
+        <li>Free and Open-Source</li>
+    </ol>
+    <br>
+    <h2> Python Syntax with Definitions & Examples</h2><br>
+    <h3>1. Comments</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Used to explain code; not executed by Python.</p>
+    <br><h4>Examples:</h4>
+    <p># This is a single-line comment <br>
+    """
+    This is a
+    multi-line comment
+    """</p><br>
+    <h3>2. Variables & Data Types</h3>
+<br>
+    <h4>Definition:</h4>
+    <p class="def">Variables store data; data types describe the kind of data.</p>
+<br>
+    <h4>Examples:</h4>
+
+    <p>age = 21             # int (integer) <br>
+    pi = 3.1415          # float (decimal number) <br>
+    name = "Alice"       # str (string/text) <br>
+    is_student = True    # bool (True or False) <br></p><br>
+    <h3>3. Type Conversion (Casting)</h3>
+<br>
+    <h4>Definition:</h4>
+    <p class="def">Convert data from one type to another.</p>
+<br>
+    <h4>Examples:</h4>
+
+    <p>num = int("123")     # converts string to int <br>
+    flt = float(10)      # converts int to float <br>
+    txt = str(456)       # converts int to string <br></p><br>
+    <h3>4. Input and Output</h3>
+<br>
+    <h4>Definition:</h4>
+    <p class="def">Read input from the user and output.</p>
+<br>
+    <h4>Examples:</h4>
+
+    <p>name = input("Your name: ")  # read input as string <br>
+    print("Hello,", name)        # output</p><br>
+    <h3>5. Operators</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Used to do calculations and logical comparisons. <br>
+    <b>Arithmetic:</b> + - * / // % ** <br>
+    <b>Comparison:</b> == != > < >= <=<br>
+    <b>Logical:</b> and or not <br>
+    <b>Assignment:</b>+= -= *= /= %= <br>
+    <b>Conditional:</b>?: <br>
+    <h4>Examples:</h4>
+    <p>3 + 2      # 5 <br>
+    5 == 5     # True <br>
+    not True   # False <br></p><br>
+    <h3>6. Conditionals (if-elif-else)</h3>
+<br>
+    <h4>Definition:</h4>
+    <p class="def">Run code only if a condition is true.</p>
+<br>
+    <h4>Examples:</h4>
+
+    <p>if age >= 18: <br>
+        print("Adult") <br>
+    elif age >= 13: <br>
+        print("Teenager") <br>
+    else: <br>
+        print("Child") <br></p><br>
+    <h3>7. Loops</h3>
+<br>
+    <h4 class="def">Definition:</h4>
+    <p>Repeat a block of code multiple times.</p><br>
+    <h4>Examples:</h4>
+    <p># for-loop <br>
+    for i in range(3): <br>
+        print(i)  # prints 0,1,2 <br>
+    <br>
+    # while-loop <br>
+    n = 0 <br>
+    while n < 3: <br>
+        print(n) <br>
+        n += 1</p><br>
+    <h3>8. Functions</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Reusable blocks of code that do a task.</p><br>
+    <h4>Examples:</h4>
+    <p>def greet(name): <br>
+        return f"Hello, {name}!" <br>
+    print(greet("Alice"))</p><br>
+    <h3>9. Lists (Mutable Ordered Collection)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Ordered sequence that can hold different data types.</p>
+    <br><h4>Examples:</h4>
+    <p>fruits = ["apple", "banana"] <br>
+    fruits.append("mango")       # add to list <br>
+    print(fruits[0])             # access elements</p><br>
+    <h3>10. Tuples (Immutable Ordered Collection)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Ordered sequence that cannot be changed after creation.</p>
+    <br><h4>Examples:</h4>
+    <p>coordinates = (10, 20) <br>
+    print(coordinates[0])  # access elements</p><br>
+    <h3>11. Sets (Unordered Unique Elements)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Collection of unique elements.</p><br>
+    <h4>Examples:</h4>
+    <p>numbers = {1, 2, 2, 3} <br>
+    numbers.add(4)        # add element <br>
+    numbers.remove(2)     # remove element</p><br>
+    <h3>12. Dictionaries (Key-Value Pairs)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Stores data as pairs (key: value).</p><br>
+    <h4>Examples:</h4>
+    <p>person = {"name": "Alice", "age": 25} <br>
+    person["age"] = 26 <br>
+    print(person.keys())     # dict_keys(['name', 'age'])</p><br>
+    <h3>13. Strings</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Sequence of characters.</p><br>
+    <h4>Examples:</h4>
+    <p>s = "Hello" <br>
+    s.upper()     # 'HELLO' <br>
+    s.lower()     # 'hello' <br>
+    s.replace('H', 'J') # 'Jello'</p><br>
+    <h3>14. Slicing (Get Part of a Sequence)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Extract sub-sequences from lists, tuples, strings.</p>
+    <br><h4>Examples:</h4>
+    <p>text = "Python" <br>
+    print(text[1:4])  # 'yth' <br>
+    print(text[:2])   # 'Py' <br>
+    print(text[::-1]) # 'nohtyP'</p><br>
+    <h3>15. List Comprehensions</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Create new lists by applying an expression to each element.</p>
+    <br><h4>Examples:</h4>
+    <p>squares = [x*x for x in range(5)]       # [0, 1, 4, 9, 16] <br>
+    evens = [x for x in range(10) if x%2==0] # [0, 2, 4, 6, 8]</p>
+    <br><h3>16. Error Handling (try/except)</h3>
+    <br><h4>Definition:</h4>
+    <p class="def">Catch and handle errors gracefully.</p>
+    <br><h4>Examples:</h4>
+    <p>try:
+        num = int("Hello")   # will raise ValueError <br>
+    except ValueError as e: <br>
+        print("Error:", e) <br>
+    finally: <br>
+        print("Done!")</p><br>
+    <h3>17. Importing Modules</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Include external functionality.</p><br>
+    <h4>Examples:</h4>
+    <p>import math <br>
+    print(math.sqrt(16))    # 4.0 <br>
+    <br>
+    from math import pi <br>
+    print(pi)               # 3.14159...</p><br>
+    <h3>18. Classes and Objects (OOP)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Blueprints for creating objects with attributes and methods.</p>
+    <br><h4>Examples:</h4>
+    <p>class Dog: <br>
+        def __init__(self, name): <br>
+            self.name = name <br>
+
+        def bark(self): <br>
+            print(self.name + " says woof!") <br>
+
+    dog = Dog("Buddy") <br>
+    dog.bark()      # Buddy says woof!</p><br>
+    <h3>19. File Handling</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Read from and write to files.</p><br>
+    <h4>Examples:</h4>
+    <p># Write to a file <br>
+    with open('file.txt', 'w') as f: <br>
+        f.write('Hello World') <br>
+    <br>
+    # Read from a file <br>
+    with open('file.txt', 'r') as f: <br>
+        content = f.read() <br>
+        print(content)</p><br>
+    <h3>20. Lambda Functions (Anonymous Functions)</h3><br>
+    <h4>Definition:</h4>
+    <p class="def">Quick, one-line functions without a name.</p>
+    <br><h4>Examples:</h4>
+    <p>square = lambda x: x * x <br>
+    print(square(5))     # 25</p><br><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to left, lightskyblue,lightpink);
+    color: black;
+    font-size: 19px;
+    text-indent: 90px;
+}
+.div1{
+    margin-left:100px;
+    margin-right: 100px;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav{
+    background:linear-gradient(to right,rgb(61,187,237),rgb(2444,94,119));
+    height: 30px;
+    color: black;
+    text-shadow: 0 0 20px whitesmoke;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 35px;
+    align-items:center;
+}
+.h3{
+    text-indent: 150px;
+}
+.h2{
+    text-indent: 120px;
+}
+.p{
+    text-indent: 150px;
+}
+ul{
+    text-indent: 150px;
+}
+.ch2{
+    text-indent: 120px;
+}
+#oop{
+    list-style-type: none;
+    text-indent: 150px;
+}

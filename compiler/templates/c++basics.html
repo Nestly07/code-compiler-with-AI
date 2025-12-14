@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Basics</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/c++style.css' %}">
+</head>
+<body>
+    <nav>
+        <center><b><h1>C++ BASICS</h1></b></center>
+    </nav><br>
+    <div>
+    <h3 class="h3">C++:</h3>
+    <p class="p1">C++ is an <b>object-oriented, general-purpose </b>programming language developed by <b>Bjarne Stroustrup.</b>It is an extension of the C language with features like <b>classes, objects, and inheritance.</b></p>
+    <br><h3 class="h3">Structure of a C++ Program:</h3>
+    <ul type="none">
+        <li>#include <iostream>  </li>
+        <li>using namespace std;  </li>
+        <li>int main(){    </li>
+        <li>cout<<"Hello,World!"  </li>
+        <li>return 0;</li>
+        <li>}</li>
+    </ul><br>
+    <h3 class="h3">1.Variables and Data Types:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <p>data_type variable_name=value;</p><br>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>int age=20;</li>
+        <li>float price=99.5;</li>
+        <li>char grade='A';</li>
+    </ul><br>
+    <h4 class="h4">Various data types:</h4>
+    <ul type="none">
+        <li>int</li>
+        <li>float</li>
+        <li>double</li>
+        <li>char</li>
+        <li>bool</li>
+        <li>string</li>
+    </ul><br>
+    <h3 class="h3">2.Input and Output:</h3>
+    <h4 class="h4">Output Syntax:</h4>
+    <p>cout<<"text or variable to be display";</p><br>
+    <h4 class="h4">Input Syntax:</h4>
+    <p>cin>>variable;</p><br>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>int age;</li>
+        <li>cin>>age;</li>
+        <li>cout<<"Age is:"<< age; </li>
+    </ul><br>
+    <h3 class="h3">3.Operators:</h3>
+    <h4 class="h4">types:</h4>
+    <ul type="none">
+        <li>Arithmetic Operators</li>
+        <li>Logical Operators</li>
+        <li>Relational Operators</li>
+        <li>Assignment Operators</li>
+        <li>Increment/Decrement Operators</li>
+        <li>Ternary Operators</li>
+    </ul><br>
+    <h3 class="h3">4.Conditional Statements:</h3>
+    <h3 class="h3">a) If Statement:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <ul type="none">
+    <li>if(condition){</li>
+    <li>//code}</li>
+    </ul><br>
+    <h3 class="h3">b) If-Else Statement:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <ul type="none">
+    <li>if(condition){</li>
+    <li>//code}</li>
+    <li>else{</li>
+    <li>}</li>
+    </ul><br>
+    <h3 class="h3">c) Else If Statement:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <ul type="none">
+    <li>if(condition-1){</li>
+    <li>//code}</li>
+    <li>else if(condition-2){</li>
+    <li>//code}</li>
+    <li>else if(condition-n){</li>
+    <li>//code}</li>
+    </ul><br>
+    <h3 class="h3">5.Switch Case Statement:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <ul type="none">
+    <li>switch(expression){</li>
+    <li>case value1:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>case valuen:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>default:</li>
+    <li>//code}</li>
+    </ul><br>
+    <h3 class="h3">6.Loops:</h3>
+    <h3 class="h3">a)For loop:</h3>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>for(int i=0;i < 5;i++){ </li>
+            <li>cout<< i<< endl;</li>
+        <li>}</li>
+    </ul><br>
+    <h3 class="h3">b)While loop:</h3>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>int i=0; </li>
+            <li>while(i< 5){</li>
+                <li>cout<< i<< endl;</li>
+                <li>i++;</li>
+        <li>}</li>
+    </ul><br>
+    <h3 class="h3">c)Do-Wile loop:</h3>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>int i=0; </li>
+        <li>do{</li>
+            <li>cout<< i<< endl;</li>
+            <li>i++;</li>
+        <li>}while(i< 5);</li>
+    </ul><br>
+    <h3 class="h3">7.Functions:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <ul type="none">
+        <li>return_type function_name(parameters){</li>
+            <li>//code</li>
+            <li>return value;</li>
+            <li>}</li>
+    </ul><br>
+    <h4 class="h4">Examples:</h4>
+    <ul type="none">
+        <li>int add(int a, int b){</li>
+            <li>return a+b;</li>
+            <li>}</li>
+    </ul><br>
+    <h3 class="h3">8.Arrays:</h3>
+    <h4 class="h4">Syntax:</h4>
+    <p>data_type array_name[size];</p>
+    <h4 class="h4">Examples:</h4>
+    <p>int marks[5]={90,85,78,92,88};</p><br>
+    <h3 class="h3">9.Comments:</h3>
+    <ul type="none">
+        <li>//single-line comment</li>
+        <li>/*multi-line comment */</li>
+    </ul><br>
+    <h3 class="h3">10.Example for classes and objects:</h3>
+    <ul type="none">
+        <li>class Student{</li>
+            <li>public:</li>
+            <li>string name;</li>
+            <li>int age;</li>
+            <li>void display(){</li>
+                <li> cout <<"name:"<< name <<"age:"<< age;</li>
+                <li>}</li>
+                <li>};</li>
+                <li>int main(){</li>
+                    <li>Student s;</li>
+                    <li>s.name="john";</li>
+                    <li>s.age=19;</li>
+                    <li>s.display();</li>
+                    <li>return 0;</li>
+                    <li>}</li>
+    </ul><br><br>
+    </p></div>
+</body>
+</html>

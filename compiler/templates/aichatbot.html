@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI ChatBot</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Times New Roman', Times, serif;}
+body{
+    background:linear-gradient(to left, lightskyblue,lightpink);
+    color:black;
+    width:100%;}
+nav{
+    background:linear-gradient(to right,rgb(61,187,237),rgb(2444,94,119));
+    color: black;
+    text-shadow: 0 0 10px white;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav h1{
+    font-size: 35px;
+    text-shadow: 0 0 10px white;
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px white;
+    margin: 20px;
+    display: flex;
+
+}
+.main{margin-top:30px;}
+h1{
+    font-size:50px;
+    text-shadow:0 0 10px white;}
+#form{
+    display:flex;
+    margin-top:20px;}
+#messagebox{
+    align-items:center;
+    margin-top: 2px;
+    margin-left: 180px;
+    width:850px;
+    height:50px;
+    border-radius:30px;
+    border:3px solid lightpink;
+    padding:0 20px;
+    font-size:15px;}
+#button{
+    width:70px;
+    border-radius:30px;
+    height:50px;
+    font-size:15px;
+    background-color:rgb(246,220,236);
+    border:3px solid lightcoral;}
+#button:hover{
+    border-color:lightpink;
+    color:lightpink;
+    }
+#messagebox:hover{
+    border-color:lightcoral;
+}
+.chatbox{
+    margin-top:30px;
+    border:2px solid #e7cfdc;
+    border-radius:6px;
+    padding:15px;
+    height:400px;
+    overflow-y:auto;
+    width:910px;
+    background-color:white;
+    margin-bottom:15px;}
+.user, .bot{
+    margin:10px 0;
+    padding:10px 15px;
+    border-radius:20px;
+    max-width:70%;
+    word-wrap:break-word;}
+.user{
+    text-align:right;
+    background-color: pink;
+    color: black;
+    margin-left:auto;}
+.bot{
+    text-align:left;
+    background-color: skyblue;
+    color:black;
+    margin-right:auto;}
+</style>
+</head>
+<body>
+<center>
+    <nav>
+            <img src="{% static 'images/mainpic.jpg'%}" alt="img">
+            <h1>AI CHATBOT</h1>
+        </nav>
+<div class="main">
+
+<div class="chatbox" id="chatlogs"></div>
+
+<form id="form" method="post" onsubmit="return false;">
+    {% csrf_token %}
+    <input type="text" name="message" id="messagebox" placeholder="Type your message..." required>
+    <button id="button" type="submit">Send</button>
+</form>
+</div>
+</center>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("form");
+    const chatlogs = document.getElementById("chatlogs");
+    const messageInput = document.getElementById("messagebox");
+
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault(); // ✅ Prevent page reload
+
+        const message = messageInput.value.trim();
+        if(!message) return;
+
+        // Show user message
+        chatlogs.innerHTML += `<div class="user">${message}</div>`;
+
+        // Prepare CSRF and form data
+        const formData = new FormData();
+        formData.append("message", message);
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        try {
+            const response = await fetch(window.location.href, {
+                method: "POST",
+                body: formData,
+                headers: {"X-CSRFToken": csrftoken}
+            });
+
+            const data = await response.json();
+
+            if(data.reply){
+                chatlogs.innerHTML += `<div class="bot">${data.reply}</div>`;
+            } else {
+                chatlogs.innerHTML += `<div class="bot">Error: ${data.error}</div>`;
+            }
+        } catch(err) {
+            chatlogs.innerHTML += `<div class="bot">Error connecting to server.</div>`;
+        }
+
+        messageInput.value = "";
+        chatlogs.scrollTop = chatlogs.scrollHeight;
+    });
+});
+
+</script>
+</body>
+</html>

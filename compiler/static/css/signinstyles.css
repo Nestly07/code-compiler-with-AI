@@ -1,0 +1,99 @@
+#header{
+    color: whitesmoke;
+    font-style: italic;
+    text-shadow:0 0 15px rgb(0, 179, 255);
+    margin-bottom: 20px;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    background-image: url("{% static 'images/signin.png' %}")no-repeat center center fixed;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    padding: 40px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgb(51, 129, 223);
+    display: flex;
+    margin-right: 20px;
+}
+h1{
+    font-size: 40px;
+}
+.main{
+    display: inline-flex;
+    gap:15px;
+    align-items: center;
+}
+.signin{
+    padding-top: 5px;
+}
+#login{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px;
+    width:350px;
+}
+#login h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 3px rgb(5, 153, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#inputbox input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid lightskyblue;
+    border-radius: 5px;
+}
+#register{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#button{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px ;
+    background-color: lightskyblue;
+}
+#button:hover{
+    color: rgb(6, 6, 252);
+}
+#last{
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px lightblue;
+    background-color: lightskyblue;
+}
+#last a{
+    text-decoration: none;
+    color: black;
+}
+#last a:hover{
+    color:rgb(1, 1, 242);
+}

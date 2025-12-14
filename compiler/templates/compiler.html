@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compiler</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/codestyle.css' %}">
+</head>
+<body>
+    <nav>
+        <img src="{% static 'images/mainpic.jpg'%}" alt="img">
+        <h1>CODE COMPILER</h1>
+    </nav>
+    <form id="codeform" method="post" action="{% url 'compiler' %}">
+        {% csrf_token %}
+
+    <div class="main">
+            <div class="header">
+                <h2>Workspace</h2>
+                <button onclick="" id="button">Run</button>
+                <button onclick="downloadCode()" id="button">Download</button>
+                <button onclick="copyCode()" id="button">Copy</button>
+                <button onclick="shareCode()" id="button">Share</button>
+                <br><br><label id="label"><b>Language:</b></label>
+                <select class="select" name="language">
+                    <option value="Python">Python</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                </select>
+                <br><br><hr><div class="t1">
+                <textarea name="code"  id="codespace" placeholder="type your code here...." rows="100" columns="100"></textarea></div>
+            </div>
+            <div>
+                <hr class="line" style="width: 4px;margin-top: 15px;justify-content: center;height: 500px;background-color: black;">
+            </div>
+            <div id="result">
+                <h2 class="output">Output</h2><br>
+                <hr>
+                <textarea id="out" cols="50" rows="50" placeholder="output..." readonly>{{output}}</textarea>
+            </div>
+    </div>
+    </form>
+<script>
+    const form = document.getElementById('codeform');
+    const outputBox = document.getElementById("out");
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("{% url 'compiler' %}", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            outputBox.value = data.output;  // ✅ sets textarea with returned output
+        })
+        .catch(error => {
+            outputBox.value = "Error occurred: " + error;
+        });
+    });
+
+    function downloadCode() {
+        const code = document.getElementById('codespace').value;
+        const blob = new Blob([code], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'code.txt';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function copyCode() {
+        const code = document.getElementById('codespace');
+        code.select();
+        document.execCommand('copy');
+        alert("Code copied to clipboard!");
+    }
+
+    function shareCode() {
+        const code = document.getElementById('codespace').value;
+        if (navigator.share) {
+            navigator.share({
+                title: 'Shared Code',
+                text: code
+            }).catch(error => alert("Sharing failed: " + error));
+        } else {
+            alert("Share not supported. Try copying the code.");
+        }
+    }
+</script>
+</body>
+</html>

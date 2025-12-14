@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to left, lightskyblue,lightpink);
+    color: black;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    margin-left: 15%;
+}
+nav{
+    background:linear-gradient(to right,rgb(61,187,237),rgb(2444,94,119));
+    color: black;
+    height: 30px;
+    text-shadow: 0 0 15px whitesmoke;
+    font-size: 20px;
+    width: 100%;
+    padding: 40px;
+    font-style: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.def{
+    text-indent: 40px;
+}
+ol li{
+    list-style-type: disc;
+    margin-left: 20%;
+}
+h3{
+    text-indent: 5px;
+}
+

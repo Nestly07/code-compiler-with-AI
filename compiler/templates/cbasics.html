@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Basics</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="{% static 'css/cstyle.css' %}">
+</head>
+<body>
+    <nav>
+        <h1><b>C BASICS</b></h1>
+    </nav><br><div>
+    <h2 class="h2">C:</h2>
+    <p class="p">C is a general-purpose, procedural programming language.Developed by <b>Dennis Ritchie</b>in 1972 at Bell Labs.It is widely used for system programming like operating systems, compiler, etc. It is a compiled language and offers low-level memory access.</p>
+    <h2 class="h2">Structure of a C Program:</h2>
+    <br><h3 class="h3">Syntax:</h3>
+    <ul>
+        <li>#include < stdio.h ></li>
+        <li>int main()</li>
+        <li>{</li>
+            <li>//code</li>
+            <li>return 0;</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="h2">Keywords:</h2>
+    <p class="p">Reserved words with special meaning. <b>Example:</b>int, float, if, else, while, return</p>
+    <br><h2 class="h2">Identifiers:</h2>
+    <p class="p">Names used for variables, functions, arrays, etc. Must start with a letter or underscore. Also case-sensitive.</p>
+    <br><h2 class="h2">Variables:</h2>
+    <p class="p">Variables are used to store data.</p>
+    <br><h3 class="h3">Examples:</h3>
+    <ul>
+        <li>int age=20;</li>
+        <li>float price=99.9;</li>
+        <li>char grade="A";</li>
+    </ul><br>
+    <h2 class="h2">Data Types:</h2>
+    <ul>
+        <li>int</li>
+        <li>float</li>
+        <li>char</li>
+        <li>double</li>
+        <li>void</li>
+    </ul><br>
+    <h2 class="h2">Operators:</h2>
+    <h3 class="h3">Types:</h3>
+    <ul type="none">
+        <li>Arithmetic Operators</li>
+        <li>Logical Operators</li>
+        <li>Relational Operators</li>
+        <li>Assignment Operators</li>
+        <li>Increment/Decrement Operators</li>
+        <li>Ternary Operators</li>
+    </ul><br>
+    <h2 class="h2">Conditional Statements:</h2>
+    <h2 class="h2">a) If Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+    <li>if(condition){</li>
+    <li>//code}</li>
+    </ul><br>
+    <h2 class="h2">b) If-Else Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+    <li>if(condition){</li>
+    <li>//code}</li>
+    <li>else{</li>
+    <li>}</li>
+    </ul><br>
+    <h2 class="h2">c) Else If Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+    <li>if(condition-1){</li>
+    <li>//code}</li>
+    <li>else if(condition-2){</li>
+    <li>//code}</li>
+    <li>else if(condition-n){</li>
+    <li>//code}</li>
+    </ul><br>
+    <h2 class="h2">Switch Case Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+    <li>switch(expression){</li>
+    <li>case value1:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>case valuen:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>default:</li>
+    <li>//code}</li>
+    </ul><br>
+    <h2 class="h2">Loops:</h2>
+    <h2 class="h2">a)For loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>for(int i=0;i < 5;i++){ </li>
+            <li>cout<< i<< endl;</li>
+        <li>}</li>
+    </ul><br>
+    <h2 class="h2">b)While loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int i=0; </li>
+            <li>while(i< 5){</li>
+                <li>cout<< i<< endl;</li>
+                <li>i++;</li>
+        <li>}</li>
+    </ul><br>
+    <h2 class="h2">c)Do-Wile loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int i=0; </li>
+        <li>do{</li>
+            <li>cout<< i<< endl;</li>
+            <li>i++;</li>
+        <li>}while(i< 5);</li>
+    </ul><br>
+    <h2 class="h2">Functions:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>return_type function_name(parameters){</li>
+            <li>//code</li>
+            <li>return value;</li>
+            <li>}</li>
+    </ul><br>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int add(int a, int b){</li>
+            <li>return a+b;</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="h2">Arrays:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <p class="p">data_type array_name[size];</p><br>
+    <h3 class="h3">Examples:</h3>
+    <p class="p">int marks[5]={90,85,78,92,88};</p><br>
+    <h2 class="h2">Comments:</h2>
+    <ul type="none">
+        <li>//single-line comment</li>
+        <li>/*multi-line comment */</li>
+    </ul><br>
+    <h2 class="h2">Input and Output:</h2>
+    <h2 class="h2">Output Syntax:</h2>
+    <p class="p">printf(//codeto be display);</p><br>
+    <h2 class="h2">Input Syntax:</h2>
+    <p class="p">scanf(//input);</p><br>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int age;</li>
+        <li>scanf("%d",&age);</li>
+        <li>printf("%d",age); </li>
+    </ul><br></div>
+</body>
+</html>

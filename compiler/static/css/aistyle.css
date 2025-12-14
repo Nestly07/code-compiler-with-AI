@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background:linear-gradient(to left, lightskyblue,lightpink);
+    color: black;
+    width: 100%;
+}
+.main{
+    margin-top: 30px;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    text-shadow:0 0 10px white;
+}
+#form{
+    margin-top: 20px;
+    display: inline-flex;
+    margin-top: 300px;
+}
+#messagebox{
+    width:50rem;
+    height: 50px;
+    border-radius: 30px;
+    border-color: rgb(239, 196, 215);
+    text-indent: 20px;
+    font-size: 15px;
+}
+#button{
+    width: 70px;
+    border-radius: 30px;
+    height: 50px;
+    font-size: 15px;
+    background-color: rgb(246, 220, 236);
+    border-color: rgb(239, 196, 215);
+}
+.chatbox
+{
+    margin-top: 30px;
+    border: 2px solid #e7cfdc;
+    border-radius: 6px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    background: #fefefe;
+    margin-bottom: 15px;
+    width: 910px;
+    background-color: rgb(253, 251, 252) ;
+}
+.user, .bot {
+    margin: 10px 0;
+}
+.user {
+    text-align: right;
+    color: #2a71d0;
+}
+.bot {
+    text-align: left;
+    color: #333;
+}

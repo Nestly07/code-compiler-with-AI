@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Basics</title>
+    <link rel="icon" href="{% static 'images/logo.jpg'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/javastyle.css' %}">
+</head>
+<body>
+    <nav><center>
+                <h1><b><i class="fa-brands fa-java"></i>  JAVA BASICS</b></h1></center>
+    </nav><br><div class="div1">
+    <h2 class="h2">Java:</h2>
+    <p class="p">Java is a <b>high-level, object-oriented, platform-independent </b>programming language developed by <b>James Gosling</b> at Sun Microsystems(now owned by Oracle).</p>
+    <p class="p"><b>Write Once,Run Anywhere(WORA): </b>Java programs can run on any system with a Java Virtual Machine(JVM).</p>
+    <br>
+    <h2 class="h2">Structure of a Java Program:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>public class Main{</li>
+            <li>public static void main(String[] args){</li>
+                <li>//code to be execute</li>
+                <li>}</li>
+                <li>}</li>
+    </ul><br>
+    <h2 class="h2">Class:</h2>
+    <h3 class="h3">Definition:</h3>
+    <p class="p">A class is a blueprint for creating objects.A class contains class members and member functions.</p>
+    <br><h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>class class_name{</li>
+            <li>//class members and methods</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="h2">Main Method:</h2>
+    <h3 class="h3">Definition:</h3>
+    <p class="p">The starting point of a java projram.</p>
+    <br><h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>public static void main(String[] args) {</li>
+            <li>//code</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="h2">Variables and Data Types:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>data_type variable_name=value;</li>
+    </ul><br>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int age=20;</li>
+        <li>float price=99.5;</li>
+        <li>char grade='A';</li>
+        <li>String name="Ram";</li>
+        <li>boolean Status=true;</li>
+    </ul><br>
+    <h3 class="h3">Various Data Types:</h3>
+    <ul type="none">
+        <li>int</li>
+        <li>float</li>
+        <li>double</li>
+        <li>char</li>
+        <li>boolean</li>
+        <li>String</li>
+    </ul><br>
+    <h2 class="h2">
+        Input and Output:
+    </h2>
+    <h3 class="h3">Output:</h3>
+    <ul type="none"><li>System.out.println("text to be display");</li></ul><br>
+    <h3 class="h3">Input (using Scanner):</h3>
+    <ul type="none">
+        <li>import java.util.Scanner;</li>
+        <li>Scanner sc=new Scanner(System.in);</li>
+        <li>int num=sc.nextInt();</li>
+        <li>String name=sc.nextLine();</li>
+    </ul><br>
+    <h2 class="h2">Operatorsin Java:</h2>
+    <ul type="none">
+        <li>Arithmetic Operators</li>
+        <li>Relational Operators</li>
+        <li>Logical Operators</li>
+        <li>Assignment Operators</li>
+        <li>Unary Operators</li>
+    </ul><br>
+    <h2 class="h2">Conditional Statements:</h2>
+    <h2 class="ch2">a)If Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>if(condition){</li>
+            <li>//code</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="ch2">b)If-Else Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>if(condition){</li>
+            <li>//code</li>
+            <li>}</li>
+            <li>else{</li>
+                <li>//code</li>
+                <li>}</li>
+    </ul><br>
+    <h2 class="ch2">c)Else If Ladder Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>if(condition-1){</li>
+            <li>//code</li>
+            <li>}</li>
+            <li>else if(condition-2){</li>
+                <li>//code</li>
+                <li>}</li>
+                <li>else if(condition-n){</li>
+                    <li>//code</li>
+                    <li>}</li>
+                 <li>else{</li>
+                <li>//code</li>
+                <li>}</li>
+    </ul><br>
+    <h2 class="h2">Switch Case Statement:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+    <li>switch(expression){</li>
+    <li>case value1:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>case valuen:</li>
+    <li>//code</li>
+    <li>break;</li>
+    <li>default:</li>
+    <li>//code}</li>
+    </ul><br>
+    <h2 class="h2">Loops:</h2>
+    <h2 class="h2">a)For loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>for(int i=0;i < 5;i++){ </li>
+            <li>System.out.println(i);</li>
+        <li>}</li>
+    </ul><br>
+    <h2 class="h2">b)While loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int i=0; </li>
+            <li>while(i< 5){</li>
+                <li>System.out.println(i);</li>
+                <li>i++;</li>
+        <li>}</li>
+    </ul><br>
+    <h2 class="h2">c)Do-Wile loop:</h2>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int i=0; </li>
+        <li>do{</li>
+            <li>System.out.println(i);</li>
+            <li>i++;</li>
+        <li>}while(i< 5);</li>
+    </ul><br>
+    <h2 class="h2">Functions:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none">
+        <li>return_type function_name(parameters){</li>
+            <li>//code</li>
+            <li>return value;</li>
+            <li>}</li>
+    </ul><br>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none">
+        <li>int add(int a, int b){</li>
+            <li>return a+b;</li>
+            <li>}</li>
+    </ul><br>
+    <h2 class="h2">Arrays:</h2>
+    <h3 class="h3">Syntax:</h3>
+    <ul type="none"><li>data_type[] array_name=new data_type[size];</li></ul><br>
+    <h3 class="h3">Examples:</h3>
+    <ul type="none"><li> int marks[5]={90,85,78,92,88};</li>
+    <li>System.out.println(marks[0]);</li>
+    <li>//Output:10</li>
+</ul><br>
+<h2 class="h2">OOP Concepts in Java:</h2>
+<ul id="oop">
+    <li>Class</li>
+    <li>Object</li>
+    <li>Inheritance</li>
+    <li>Polymorphism</li>
+    <li>Encapsulation</li>
+    <li>Abstraction</li>
+</ul><br>
+<h3 class="h3">Example:</h3>
+    <ul type="none">
+        <li>class Student{</li>
+            <li>string name;</li>
+            <li>int age;</li>
+            <li>void display(){</li>
+                <li>System.out.println("Name:"+name+"Age:"+age);</li>
+                <li>}</li>
+                <li>}</li>
+                <li>public class Main(){</li>
+                    <li>public static void main(String args[]){</li>
+                    <li>Student s=new Student();</li>
+                    <li>s.name="john";</li>
+                    <li>s.age=19;</li>
+                    <li>s.display();</li>
+                    <li>}</li>
+                    <li>}</li>
+    </ul><br>
+    <h2 class="h2">Comments:</h2>
+    <ul type="none">
+        <li>//single-line comment</li>
+        <li>/*multi-line comment */</li>
+    </ul><br></div>
+</body>
+</html>

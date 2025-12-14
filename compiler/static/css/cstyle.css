@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background:linear-gradient(to left, lightskyblue,lightpink);
+    color: black;
+    font-size: 18px;
+    text-indent: 90px;
+}
+div{
+    margin-left: 80px;
+}
+nav{
+    background:linear-gradient(to right,rgb(61,187,237),rgb(2444,94,119));
+    height: 30px;
+    color: black;
+    text-shadow: 0 0 10px whitesmoke;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.p{
+    text-indent: 200px;
+}
+.h2{
+    text-indent: 150px;
+}
+ul{
+    text-indent: 180px;
+    list-style-type: none;
+}
+.h3{
+    text-indent: 160px;
+}
